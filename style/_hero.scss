@@ -1,0 +1,117 @@
+ 
+ body{
+ 
+     box-sizing: border-box;
+  
+    }
+
+ .main-area .banner-area{
+    position: relative;
+    top: -5rem;
+    z-index: -2;
+    background: $gradient-color;
+    overflow: hidden;
+    min-height: 110vh;
+  
+    border: 0 50px solid black;
+      
+     &::after{
+         content: '';
+         width: 108%;
+         height: 10rem;
+         background-color: rgb(255, 255, 255);
+         position: absolute;
+         bottom: 15%;
+         left: -2%;
+         z-index: 6;
+         transform: translateX(-10px);
+         transform: rotate(-5deg);
+         z-index: -1;
+         
+         @include respond-below(lg){
+            position: absolute;
+            bottom: 10%;
+            height: 8rem;
+            width: 110%;
+         }
+     }
+        
+.banner-title{
+    margin: auto;
+    color: aliceblue;
+    position: relative;
+    display: grid;
+    place-content: center;
+    
+    h1{
+        font-family: Lobster;
+      }
+
+      @include respond-below(lg){
+        margin: 25% 0 0 0;
+      }
+
+    @include respond-below(md){
+        margin-top: 50%;
+        background-color: #000;
+        border-radius: 1em;
+        display: grid;
+        place-content: center;
+
+        h1{
+            font-size: 3.5rem;
+        }
+    }
+}
+
+
+ 
+.banner-img{
+    margin-top: 15%; 
+    display: grid;
+    place-content: center;
+        
+    @include respond-below(lg){
+        img{
+            height:35rem ;
+            margin: 10% auto; 
+           
+        }
+    }
+    @include respond-below(md){
+        margin: 5% 20%;   
+        display: grid;
+        place-content: center;
+
+        img{
+            min-height:40rem;
+            max-width:30rem;
+            object-fit: contain;
+        }
+
+    }
+}
+
+.banner-button{
+ 
+    .primary-button{
+        color: rgb(0, 0, 0) !important;
+    }
+
+} 
+
+ span{
+     opacity: 0;
+     transition:  all 1s ease;
+     transform: translateY(-100px);
+     display: inline-block;
+ }
+    span.fade{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+
+ 

@@ -1,0 +1,37 @@
+
+.button{
+padding: .2rem .5rem;
+position: relative;
+border-radius: 10px;
+margin: 1rem;
+color: aliceblue;
+
+&:hover{
+  color:#000;
+  background-color: aliceblue;
+  
+}
+
+@include respond-below(md){
+    font-size: .8rem;
+    padding: .6rem 1.5rem;
+}
+
+@include respond-above(md){
+    padding: .6rem 2.2rem;
+    font:normal 500 16px/20px $roboto;
+}
+ 
+
+}
+
+.primary-button{
+    background-color: rgb(255, 255, 255);
+    background-clip: padding-box;
+    transition: background .6s ease; 
+    font-family: cursive;
+       
+}
+
+
+
